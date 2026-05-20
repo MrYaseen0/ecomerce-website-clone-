@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y COMS - Amazon-Inspired E-Commerce</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-dark text-white p-3 sticky-top">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html" class="text-white text-decoration-none fs-4 fw-bold">Y COMS</a>
+            </div>
+
+            <div class="search-bar d-flex w-50 mx-4">
+                <select class="form-select w-auto rounded-start bg-light text-dark">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                </select>
+                <input type="text" class="form-control rounded-0" placeholder="Type to search...">
+                <button class="btn btn-warning rounded-end"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="user-actions d-flex align-items-center">
+                <div class="me-3">
+                    <a href="#" class="text-white text-decoration-none">
+                        <small>Hello, Sign in</small><br>
+                        <b>Account & Lists</b>
+                    </a>
+                </div>
+                <div class="me-3">
+                    <a href="#" class="text-white text-decoration-none">
+                        <small>Returns</small><br>
+                        <b>& Orders</b>
+                    </a>
+                </div>
+                <div>
+                    <a href="cart.html" class="text-white text-decoration-none position-relative">
+                        <i class="fas fa-shopping-cart fa-2x"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" id="cart-badge">0</span>
+                        <b class="ms-1">Cart</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-secondary text-white p-2">
+        <div class="container-fluid">
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2"><i class="fas fa-bars me-1"></i> All</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2">Today's Deals</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2">Customer Service</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2">Registry</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2">Gift Cards</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2">Sell</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner / Carousel -->
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 400px; background: linear-gradient(to right, #232f3e, #131921);">
+                <div class="d-flex align-items-center justify-content-center h-100 text-white flex-column">
+                    <h2>Welcome to Y COMS</h2>
+                    <p class="lead">Your one-stop shop for everything.</p>
+                </div>
+            </div>
+            <!-- More items can be added here -->
+        </div>
+    </div>
+
+    <!-- Main Content (Categories & Products) -->
+    <main class="container-fluid main-content p-4" style="margin-top: -150px; position: relative; z-index: 10;">
+        <!-- Featured Categories Grid -->
+        <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+            <div class="col">
+                <div class="card h-100 p-3">
+                    <h5 class="card-title">Gaming Accessories</h5>
+                    <img src="https://placehold.co/300x200" class="card-img-top mb-3" alt="Category">
+                    <a href="products.html" class="mt-auto text-decoration-none">Shop now</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 p-3">
+                    <h5 class="card-title">Electronics</h5>
+                    <img src="https://placehold.co/300x200" class="card-img-top mb-3" alt="Category">
+                    <a href="products.html" class="mt-auto text-decoration-none">Shop now</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 p-3">
+                    <h5 class="card-title">Home & Kitchen</h5>
+                    <img src="https://placehold.co/300x200" class="card-img-top mb-3" alt="Category">
+                    <a href="products.html" class="mt-auto text-decoration-none">Shop now</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 p-3">
+                    <h5 class="card-title">Fashion</h5>
+                    <img src="https://placehold.co/300x200" class="card-img-top mb-3" alt="Category">
+                    <a href="products.html" class="mt-auto text-decoration-none">Shop now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deals / Product Scroller -->
+        <div class="card p-4 mb-4">
+            <h4>Today's Deals <a href="#" class="text-decoration-none fs-6 ms-2">See all deals</a></h4>
+            <div class="d-flex overflow-auto mt-3 pb-2 gap-3 no-scrollbar">
+                <!-- Product Card -->
+                <div class="card product-card flex-shrink-0" style="width: 200px;">
+                    <img src="https://placehold.co/200" class="card-img-top p-2" alt="Product">
+                    <div class="card-body p-2">
+                        <span class="badge bg-danger mb-1">Up to 25% off</span>
+                        <p class="card-text text-truncate mb-1">Wireless Earbuds</p>
+                        <h6 class="mb-0">$49.99</h6>
+                    </div>
+                </div>
+                 <!-- Product Card -->
+                 <div class="card product-card flex-shrink-0" style="width: 200px;">
+                    <img src="https://placehold.co/200" class="card-img-top p-2" alt="Product">
+                    <div class="card-body p-2">
+                        <span class="badge bg-danger mb-1">Top Deal</span>
+                        <p class="card-text text-truncate mb-1">Smart Watch</p>
+                        <h6 class="mb-0">$89.99</h6>
+                    </div>
+                </div>
+                 <!-- Product Card -->
+                 <div class="card product-card flex-shrink-0" style="width: 200px;">
+                    <img src="https://placehold.co/200" class="card-img-top p-2" alt="Product">
+                    <div class="card-body p-2">
+                        <span class="badge bg-danger mb-1">15% off</span>
+                        <p class="card-text text-truncate mb-1">Bluetooth Speaker</p>
+                        <h6 class="mb-0">$29.99</h6>
+                    </div>
+                </div>
+                 <!-- Product Card -->
+                 <div class="card product-card flex-shrink-0" style="width: 200px;">
+                    <img src="https://placehold.co/200" class="card-img-top p-2" alt="Product">
+                    <div class="card-body p-2">
+                        <span class="badge bg-danger mb-1">Clearance</span>
+                        <p class="card-text text-truncate mb-1">Laptop Stand</p>
+                        <h6 class="mb-0">$19.99</h6>
+                    </div>
+                </div>
+                <!-- Product Card -->
+                <div class="card product-card flex-shrink-0" style="width: 200px;">
+                    <img src="https://placehold.co/200" class="card-img-top p-2" alt="Product">
+                    <div class="card-body p-2">
+                        <span class="badge bg-danger mb-1">Special</span>
+                        <p class="card-text text-truncate mb-1">Mechanical Keyboard</p>
+                        <h6 class="mb-0">$59.99</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Get to Know Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">About Y COMS</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Make Money with Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Sell on Y COMS</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Become an Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Y COMS Payment Products</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Y COMS Rewards Visa Signature Cards</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Y COMS Store Card</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Let Us Help You</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Your Account</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Your Orders</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Shipping Rates & Policies</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: #131921;">
+            © 2026 Y COMS. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

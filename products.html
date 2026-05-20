@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Y COMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Header (Same as index.html) -->
+    <header class="bg-dark text-white p-3 sticky-top">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html" class="text-white text-decoration-none fs-4 fw-bold">Y COMS</a>
+            </div>
+
+            <div class="search-bar d-flex w-50 mx-4">
+                <select class="form-select w-auto rounded-start bg-light text-dark">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                </select>
+                <input type="text" class="form-control rounded-0" placeholder="Type to search...">
+                <button class="btn btn-warning rounded-end"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="user-actions d-flex align-items-center">
+                <div class="me-3">
+                    <a href="#" class="text-white text-decoration-none">
+                        <small>Hello, Sign in</small><br>
+                        <b>Account & Lists</b>
+                    </a>
+                </div>
+                <div class="me-3">
+                    <a href="#" class="text-white text-decoration-none">
+                        <small>Returns</small><br>
+                        <b>& Orders</b>
+                    </a>
+                </div>
+                <div>
+                    <a href="cart.html" class="text-white text-decoration-none position-relative">
+                        <i class="fas fa-shopping-cart fa-2x"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" id="cart-badge">0</span>
+                        <b class="ms-1">Cart</b>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-secondary text-white p-2">
+        <div class="container-fluid">
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2"><i class="fas fa-bars me-1"></i> All</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2">Today's Deals</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2">Customer Service</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2">Registry</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2">Gift Cards</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white px-2">Sell</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container-fluid my-4">
+        <div class="row">
+            <!-- Sidebar / Filters -->
+            <aside class="col-md-2 filter-sidebar">
+                <h5>Department</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-dark text-decoration-none fw-bold">Electronics</a></li>
+                    <li><a href="#" class="text-dark text-decoration-none ms-2">Computers & Accessories</a></li>
+                    <li><a href="#" class="text-dark text-decoration-none ms-3 fw-bold">Laptops</a></li>
+                </ul>
+
+                <hr>
+
+                <h5>Customer Reviews</h5>
+                <ul class="list-unstyled rating-filter">
+                    <li><a href="#" class="text-dark text-decoration-none"><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="far fa-star text-warning"></i> & Up</a></li>
+                    <li><a href="#" class="text-dark text-decoration-none"><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="far fa-star text-warning"></i><i class="far fa-star text-warning"></i> & Up</a></li>
+                </ul>
+
+                <hr>
+
+                <h5>Brand</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="brandHP">
+                    <label class="form-check-label" for="brandHP">HP</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="brandDell">
+                    <label class="form-check-label" for="brandDell">Dell</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="brandApple">
+                    <label class="form-check-label" for="brandApple">Apple</label>
+                </div>
+
+                <hr>
+
+                <h5>Price</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-dark text-decoration-none">Under $500</a></li>
+                    <li><a href="#" class="text-dark text-decoration-none">$500 to $1,000</a></li>
+                    <li><a href="#" class="text-dark text-decoration-none">$1,000 to $1,500</a></li>
+                    <li><a href="#" class="text-dark text-decoration-none">$1,500 & Above</a></li>
+                </ul>
+                <div class="d-flex align-items-center mt-2">
+                    <input type="text" class="form-control form-control-sm me-1" placeholder="$ Min">
+                    <input type="text" class="form-control form-control-sm mx-1" placeholder="$ Max">
+                    <button class="btn btn-sm btn-outline-secondary ms-1">Go</button>
+                </div>
+            </aside>
+
+            <!-- Product Grid -->
+            <div class="col-md-10">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <p class="mb-0"><strong>1-12 of over 1,000 results for "Laptops"</strong></p>
+                    <div class="d-flex align-items-center">
+                        <span class="me-2">Sort by:</span>
+                        <select class="form-select form-select-sm w-auto shadow-sm">
+                            <option>Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Avg. Customer Review</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4" id="product-list">
+                    <!-- Product 1 -->
+                    <div class="col">
+                        <div class="card h-100 product-card shadow-sm border-0">
+                            <img src="https://placehold.co/300x200" class="card-img-top p-3" alt="Laptop">
+                            <div class="card-body">
+                                <h6 class="card-title text-truncate">HP 15.6" HD Laptop, Intel Core i5, 8GB RAM, 256GB SSD</h6>
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                    <span class="text-primary ms-1"><small>4,123</small></span>
+                                </div>
+                                <div class="d-flex align-items-baseline mb-1">
+                                    <span class="fs-4 fw-bold me-2">$499.00</span>
+                                    <span class="text-muted text-decoration-line-through"><small>$599.00</small></span>
+                                </div>
+                                <p class="text-success small mb-2"><i class="fas fa-check"></i> Prime Delivery</p>
+                                <button class="btn btn-warning w-100 rounded-pill fw-semibold add-to-cart-btn" data-id="1" data-name="HP 15.6 Laptop" data-price="499.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="col">
+                        <div class="card h-100 product-card shadow-sm border-0">
+                            <img src="https://placehold.co/300x200" class="card-img-top p-3" alt="Laptop">
+                            <div class="card-body">
+                                <h6 class="card-title text-truncate">Apple MacBook Air M2, 13.6-inch, 8GB RAM, 256GB SSD</h6>
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <span class="text-primary ms-1"><small>12,456</small></span>
+                                </div>
+                                <div class="d-flex align-items-baseline mb-1">
+                                    <span class="fs-4 fw-bold me-2">$1099.00</span>
+                                </div>
+                                <p class="text-success small mb-2"><i class="fas fa-check"></i> Prime Delivery</p>
+                                <button class="btn btn-warning w-100 rounded-pill fw-semibold add-to-cart-btn" data-id="2" data-name="Apple MacBook Air M2" data-price="1099.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="col">
+                        <div class="card h-100 product-card shadow-sm border-0">
+                            <img src="https://placehold.co/300x200" class="card-img-top p-3" alt="Laptop">
+                            <div class="card-body">
+                                <h6 class="card-title text-truncate">Dell Inspiron 15 3000, 15.6" FHD, AMD Ryzen 5, 12GB RAM</h6>
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                    <span class="text-primary ms-1"><small>892</small></span>
+                                </div>
+                                <div class="d-flex align-items-baseline mb-1">
+                                    <span class="fs-4 fw-bold me-2">$429.99</span>
+                                </div>
+                                <p class="text-success small mb-2"><i class="fas fa-check"></i> Prime Delivery</p>
+                                <button class="btn btn-warning w-100 rounded-pill fw-semibold add-to-cart-btn" data-id="3" data-name="Dell Inspiron 15" data-price="429.99">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Product 4 -->
+                     <div class="col">
+                        <div class="card h-100 product-card shadow-sm border-0">
+                            <img src="https://placehold.co/300x200" class="card-img-top p-3" alt="Laptop">
+                            <div class="card-body">
+                                <h6 class="card-title text-truncate">Lenovo IdeaPad 3, 14.0" FHD, Intel Core i3, 8GB RAM</h6>
+                                <div class="text-warning mb-2">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                                    <span class="text-primary ms-1"><small>345</small></span>
+                                </div>
+                                <div class="d-flex align-items-baseline mb-1">
+                                    <span class="fs-4 fw-bold me-2">$349.00</span>
+                                </div>
+                                <p class="text-success small mb-2"><i class="fas fa-check"></i> Prime Delivery</p>
+                                <button class="btn btn-warning w-100 rounded-pill fw-semibold add-to-cart-btn" data-id="4" data-name="Lenovo IdeaPad 3" data-price="349.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <nav aria-label="Page navigation" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5">
+        <!-- Reusing same footer as index.html -->
+         <div class="container p-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Get to Know Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">About Y COMS</a></li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fas fa-check-circle me-2"></i>Item added to cart!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
